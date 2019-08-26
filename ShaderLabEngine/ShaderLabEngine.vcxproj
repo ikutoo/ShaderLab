@@ -19,7 +19,30 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\gameConfig.cpp" />
+    <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\gameShadingTechnique.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\meshRenderer.cpp" />
+    <ClCompile Include="src\passRenderer.cpp" />
+    <ClCompile Include="src\sceneRenderer.cpp" />
+    <ClCompile Include="src\textureUtil.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\common.h" />
+    <ClInclude Include="src\constants.h" />
+    <ClInclude Include="src\gameConfig.h" />
+    <ClInclude Include="src\Application.h" />
+    <ClInclude Include="src\gameShadingTechnique.h" />
+    <ClInclude Include="src\meshRenderer.h" />
+    <ClInclude Include="src\passRenderer.h" />
+    <ClInclude Include="src\sceneRenderer.h" />
+    <ClInclude Include="src\textureUtil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\External\glt\glt\glt.vcxproj">
+      <Project>{0dd6211c-e3f7-4365-b552-fbf11476f2c4}</Project>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -95,7 +118,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SOIL)\include;$(BOOST);$(OPENGL)\include;$(GLM);$(HIVE_ROOT)/include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)External\glt;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -113,7 +136,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SOIL)\include;$(BOOST);$(OPENGL)\include;$(GLM);$(HIVE_ROOT)/include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)External\glt;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,7 +156,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SOIL)\include;$(BOOST);$(OPENGL)\include;$(GLM);$(HIVE_ROOT)/include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)External\glt;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -155,7 +178,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SOIL)\include;$(BOOST);$(OPENGL)\include;$(GLM);$(HIVE_ROOT)/include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)External\glt;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

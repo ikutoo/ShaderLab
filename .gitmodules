@@ -1,0 +1,3 @@
+[submodule "External/glt"]
+	path = External/glt
+	url = git@github.com:s-toy/GLToolkit.git
